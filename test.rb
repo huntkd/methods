@@ -55,4 +55,16 @@ describe 'Methods' do
 
   end
 
+  describe 'blackjack' do
+
+    it 'returns the value closest to 21' do
+      blackjack(19, 16).must_equal(19)
+    end
+
+    it 'returns zero if both are over 21' do
+      blackjack(22, 29).must_equal(0)
+    end
+
+  end
+
 end

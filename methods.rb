@@ -114,6 +114,21 @@ end
 #
 # TODO - write blackjack (tests first)
 
+def blackjack(a, b)
+	if a > 21
+		if b > 21
+			return 0
+		end
+	end
+	if a > b
+		return a
+	end
+	if b > a
+		return b
+	end
+end
+
+
 
 # n_twice
 #
