@@ -47,6 +47,29 @@ end
 #
 # TODO - write monkey_trouble?
 
+def monkey_trouble?(a_smiling, b_smiling)
+	if a_smiling
+		if b_smiling
+			return true
+		end
+	end
+	if !a_smiling
+		if !b_smiling
+			return true
+		end
+	end
+	if !a_smiling
+		if b_smiling
+			return false
+		end
+	end
+	if a_smiling
+		if !b_smiling
+			return false
+		end
+	end
+end
+
 
 # sum_double
 #
