@@ -67,4 +67,35 @@ describe 'Methods' do
 
   end
 
+  describe 'n_twice' do
+
+    it 'returns the first and last n characters of the string' do
+      n_twice([1, 2, 3, 4, 5, 6], 2).must_equal([1, 2, 5, 6])
+    end
+
+    it 'returns the first and last n characters of the string with n length string' do
+      n_twice([1, 2, 3], 3).must_equal([1, 2, 3, 1, 2, 3])
+    end
+
+  end
+
+  describe 'close_far' do
+
+    it 'if b and c are far from a and close to each other' do
+      close_far(5, 3, 2).must_equal(true)
+    end
+
+    it 'if b and c are not close' do
+      close_far(5, 4, 9).must_equal(false)
+    end
+
+    it 'if b and c are close to each other and a' do
+      close_far(2, 3, 4).must_equal(false)
+    end    
+
+
+  end
+
+
+
 end

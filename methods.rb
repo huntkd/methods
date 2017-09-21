@@ -129,7 +129,6 @@ def blackjack(a, b)
 end
 
 
-
 # n_twice
 #
 # Given a string and an int n, return a string made of the first and last n 
@@ -146,6 +145,14 @@ end
 # TODO - write n_twice (tests first)
 
 
+def n_twice(str, n)
+
+
+end
+
+
+
+
 # close_far
 #
 # Given three ints, a b c, return true if one of b or c is "close" (differing 
@@ -159,3 +166,23 @@ end
 #   * c - an integer
 #
 # TODO - write close_far (tests first)
+
+def close_far(a, b, c)
+	if (b - c).abs <= 1
+		if (a - b).abs >= 2
+			if (a - c).abs >= 2
+				return true
+			end
+		end
+	end
+	if (b - c).abs > 1
+		return false
+	end
+	if (a - b).abs < 2
+		return false
+	end
+	if (a - c).abs < 2
+		return false
+	end
+
+end
