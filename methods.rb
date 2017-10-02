@@ -146,11 +146,11 @@ end
 
 
 def n_twice(str, n)
-	first_letters = str[0...n]
-	last_letters = str[str.length-n..str.length]
-	return [first_letters, last_letters]
+	if str.length < n + 1
+		return str
+	end
+	return str[0..(n - 1)] + str[(str.length-n)..(str.length-1)]
 end
-
 
 # close_far
 #
